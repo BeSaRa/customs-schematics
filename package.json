@@ -4,12 +4,15 @@
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "check": "npm run build && schematics .:ng-add",
+    "apply": "npm run build && schematics .:ng-add --debug=false",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "schematics"
   ],
-  "author": "",
+  "author": "BeSaRa",
   "ng-add": {
     "save": "devDependencies"
   },
