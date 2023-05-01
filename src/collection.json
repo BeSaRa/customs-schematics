@@ -1,13 +1,54 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "customs-schematics": {
-      "description": "A blank schematic.",
-      "factory": "./customs-schematics/index#customsSchematics"
-    },
     "ng-add": {
-      "description": "A blank schematic.",
+      "description": "add the packages to the project",
       "factory": "./ng-add/index#ngAdd"
+    },
+    "create-model": {
+      "description": "Create Model extends BaseModel",
+      "factory": "./create-model/index#createModel",
+      "schema": "./create-model/schema.json"
+    },
+    "create-model-interceptor": {
+      "description": "Create interceptor implement Model interceptor.",
+      "factory": "./create-model-interceptor/index#createModelInterceptor",
+      "schema": "./create-model-interceptor/schema.json"
+    },
+    "admin-page-component": {
+      "description": "Create admin page component extends AdminComponent.",
+      "factory": "./admin-page-component/index#adminPageComponent",
+      "schema": "./admin-page-component/schema.json"
+    },
+    "admin-popup-component": {
+      "description": "Create admin popup component extends AdminPopupComponent",
+      "factory": "./admin-popup-component/index#adminPopupComponent",
+      "schema": "./admin-popup-component/schema.json"
+    },
+    "crud-service": {
+      "description": "Create Service extends BaseCrudService or BaseCrudServiceWithDialog",
+      "factory": "./crud-service/index#crudService",
+      "schema": "./crud-service/schema.json"
+    },
+    "create-menu-item": {
+      "description": "Create menu item.",
+      "factory": "./create-menu-item/index#createMenuItem",
+      "schema": "./create-menu-item/schema.json"
+    },
+    "create-app-route": {
+      "description": "Create App Route.",
+      "factory": "./create-app-route/index#createAppRoute",
+      "schema": "./create-app-route/schema.json"
+    },
+    "create-app-full-route": {
+      "description": "Create App full Route.",
+      "factory": "./create-app-full-route/index#createAppFullRoute",
+      "schema": "./create-app-full-route/schema.json"
+    },
+    "create-endpoint": {
+      "description": "Create endpoint.",
+      "factory": "./create-endpoint/index#createEndpoint",
+      "schema": "./create-endpoint/schema.json"
     }
   }
 }
