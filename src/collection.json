@@ -15,20 +15,20 @@
       "factory": "./create-model-interceptor/index#createModelInterceptor",
       "schema": "./create-model-interceptor/schema.json"
     },
-    "admin-page-component": {
+    "create-admin-page-component": {
       "description": "Create admin page component extends AdminComponent.",
-      "factory": "./admin-page-component/index#adminPageComponent",
-      "schema": "./admin-page-component/schema.json"
+      "factory": "./create-admin-page-component/index#createAdminPageComponent",
+      "schema": "./create-admin-page-component/schema.json"
     },
-    "admin-popup-component": {
+    "create-admin-popup-component": {
       "description": "Create admin popup component extends AdminPopupComponent",
-      "factory": "./admin-popup-component/index#adminPopupComponent",
-      "schema": "./admin-popup-component/schema.json"
+      "factory": "./create-admin-popup-component/index#createAdminPopupComponent",
+      "schema": "./create-admin-popup-component/schema.json"
     },
-    "crud-service": {
+    "create-crud-service": {
       "description": "Create Service extends BaseCrudService or BaseCrudServiceWithDialog",
-      "factory": "./crud-service/index#crudService",
-      "schema": "./crud-service/schema.json"
+      "factory": "./create-crud-service/index#createCrudService",
+      "schema": "./create-crud-service/schema.json"
     },
     "create-menu-item": {
       "description": "Create menu item.",

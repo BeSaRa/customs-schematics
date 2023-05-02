@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "GenerateNewService",
-  "title": "create scaffold for e-service",
+  "$id": "CreateAppFullRoute",
+  "title": "Create absolute route for the feature",
   "properties": {
     "name": {
       "type": "string",
