@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "endpoint",
+  "title": "create endpoint (API-URL)",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "endpoint name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "JOB_TITLE",
+      "x-prompt": "Please enter the endpoint name"
+    },
+    "url": {
+      "type": "string",
+      "description": "url for this endpoint",
+      "x-prompt": "please provide the url for the endpoint",
+      "default": "/job-title"
+    },
+    "debug": {
+      "type": "boolean",
+      "description": "debug mode",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "url"
+  ]
+}
