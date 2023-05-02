@@ -1,22 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "CreateAdminPageComponent",
-  "title": "create scaffold for e-service",
+  "title": "create admin page component",
   "properties": {
     "name": {
       "type": "string",
-      "description": "name of the service",
+      "description": "name of component",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What name would you like to use for service"
+      "x-prompt": "What name would you like to use for the component",
+      "default": "job-title"
     }
   },
   "required": [
-    "name",
-    "endPoint",
-    "caseType",
-    "underModule"
+    "name"
   ]
 }

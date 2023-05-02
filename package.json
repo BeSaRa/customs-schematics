@@ -1,7 +1,7 @@
 {
   "name": "customs-schematics",
   "version": "0.0.0",
-  "description": "A blank schematics",
+  "description": "tool to make the development more easier than ever",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
@@ -21,6 +21,8 @@
     "apply:create-crud-service": "npm run build && schematics .:create-crud-service --debug=false",
     "check:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component",
     "apply:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component --debug=false",
+    "check:create-admin-page-component": "npm run build && schematics .:create-admin-page-component",
+    "apply:create-admin-page-component": "npm run build && schematics .:create-admin-page-component --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

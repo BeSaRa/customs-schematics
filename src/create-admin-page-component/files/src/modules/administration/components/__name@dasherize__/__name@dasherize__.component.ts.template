@@ -1,0 +1,23 @@
+import { Component, inject } from '@angular/core';
+import { AdminComponent } from '@abstracts/admin-component';
+import { <%= classify(name) %> } from '@models/<%= dasherize(name) %>';
+import { <%= classify(name) %>Service } from '@services/<%= dasherize(name) %>.service';
+import { <%= classify(name) %>PopupComponent } from '@modules/administration/popups/<%= dasherize(name) %>-popup/<%= dasherize(name) %>-popup.component';
+
+@Component({
+  selector: 'app-<%= dasherize(name) %>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.scss'],
+})
+export class <%= classify(name) %>Component extends AdminComponent<
+  <%= classify(name) %>PopupComponent,
+  <%= classify(name) %>,
+  <%= classify(name) %>Service
+> {
+  service = inject(<%= classify(name) %>Service);
+  displayedColumns: string[] = [
+    'select',
+    'arName',
+    'actions'
+  ];
+}
