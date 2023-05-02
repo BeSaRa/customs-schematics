@@ -1,9 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "CreateAdminPopupComponent",
-  "title": "create scaffold for e-service",
+  "title": "create scaffold popup component for the admin page",
   "properties": {
-
+    "name": {
+      "type": "string",
+      "description": "component name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": "jobTitle",
+      "x-prompt": "Please enter service name to be generated"
+    }
   },
   "required": [
     "name"

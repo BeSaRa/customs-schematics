@@ -19,6 +19,8 @@
     "apply:create-model": "npm run build && schematics .:create-model --debug=false",
     "check:create-crud-service": "npm run build && schematics .:create-crud-service",
     "apply:create-crud-service": "npm run build && schematics .:create-crud-service --debug=false",
+    "check:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component",
+    "apply:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
