@@ -1,4 +1,4 @@
-import {SchematicContext} from "@angular-devkit/schematics";
+import {SchematicContext, Tree} from "@angular-devkit/schematics";
 import {
     createSourceFile,
     ScriptTarget,
@@ -12,4 +12,10 @@ export function defaultPath(context: SchematicContext, path: string, debugPath: 
 
 export function readSource(path: string, content: string, parent = true): SourceFile {
     return createSourceFile(path, content, ScriptTarget.Latest, parent)
+}
+
+export function readSourceAndContent(tree: Tree, path: string): { source: SourceFile, content: string } {
+    const content = tree.readText(path)
+    const source = readSource(path, content)
+    return {source, content}
 }

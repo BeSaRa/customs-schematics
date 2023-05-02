@@ -1,6 +1,6 @@
 import {Rule, SchematicContext, SchematicsException, strings, Tree} from '@angular-devkit/schematics';
 import {EndpointOptions} from "./endpoint-options";
-import {defaultPath, readSource} from "../utils/utils";
+import {defaultPath, readSourceAndContent} from "../utils/utils";
 import {findNodes} from "@schematics/angular/utility/ast-utils";
 import {
     isObjectLiteralExpression
@@ -12,9 +12,8 @@ import {applyToUpdateRecorder} from "@schematics/angular/utility/change";
 // per file.
 export function createEndpoint(_options: EndpointOptions): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const path = defaultPath(_context, 'app/endpoints.ts', 'app/endpoints.ts')
-        const content = tree.readText(path)
-        const source = readSource(path, content)
+        const path = defaultPath(_context, 'src/constants/endpoints.ts', 'app/endpoints.ts')
+        const {source} = readSourceAndContent(tree , path)
         const variable = findNodes(source, isObjectLiteralExpression)
         if (!variable.length)
             throw new SchematicsException('cannot find the EndPoints Variable!')

@@ -7,6 +7,8 @@
     "test": "npm run build && jasmine src/**/*_spec.js",
     "check:create-endpoint": "npm run build && schematics .:create-endpoint",
     "apply:create-endpoint": "npm run build && schematics .:create-endpoint --debug=false",
+    "check:create-app-full-route": "npm run build && schematics .:create-app-full-route",
+    "apply:create-app-full-route": "npm run build && schematics .:create-app-full-route --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
