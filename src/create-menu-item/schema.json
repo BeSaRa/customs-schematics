@@ -5,72 +5,27 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "name of the service",
+      "description": "menu name",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What name would you like to use for service"
+      "default": "JOB_TITLE",
+      "x-prompt": "Please enter the endpoint name"
     },
-    "caseType": {
-      "type": "number",
-      "description": "number of case type ",
-      "pattern": "^[0-9]+",
-      "x-prompt": "please provide the caseType"
-    },
-    "endPoint": {
+    "parent": {
       "type": "string",
-      "description": "the main endpoint for the service",
-      "x-prompt": "please provide the main endpoint",
-      "default": "/project-implementation"
-    },
-    "underModule": {
-      "type": "string",
-      "description": "choose the main module",
-      "default": "general-services",
-      "enum": [
-        "general-services",
-        "collection",
-        "office-services",
-        "projects",
-        "remittances",
-        "urgent-intervention"
-      ],
-      "x-prompt": {
-        "message": "select the module that you need to put your service under it",
-        "items": [
-          {
-            "value": "general-services",
-            "label": "General"
-          },
-          {
-            "value": "collection",
-            "label": "Collections"
-          },
-          {
-            "value": "office-services",
-            "label": "Offices"
-          },
-          {
-            "value": "projects",
-            "label": "Projects"
-          },
-          {
-            "value": "remittances",
-            "label": "Remittances"
-          },
-          {
-            "value": "urgent-intervention",
-            "label": "Urgent Intervention"
-          }
-        ]
-      }
+      "description": "Parent name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "default": null,
+      "x-prompt": "Please write the Parent Name like (ADMINISTRATION)"
     }
   },
   "required": [
     "name",
-    "endPoint",
-    "caseType",
-    "underModule"
+    "parent"
   ]
 }
