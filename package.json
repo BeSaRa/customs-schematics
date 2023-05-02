@@ -13,6 +13,8 @@
     "apply:create-app-route": "npm run build && schematics .:create-app-route --debug=false",
     "check:create-menu-item": "npm run build && schematics .:create-menu-item",
     "apply:create-menu-item": "npm run build && schematics .:create-menu-item --debug=false",
+    "check:create-model-interceptor": "npm run build && schematics .:create-model-interceptor",
+    "apply:create-model-interceptor": "npm run build && schematics .:create-model-interceptor --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
