@@ -17,7 +17,12 @@
       "type": "string",
       "description": "url for this endpoint",
       "x-prompt": "please provide the url for the endpoint",
-      "default": "/job-title"
+      "default": "/entity/job-title"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

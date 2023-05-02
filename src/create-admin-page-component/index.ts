@@ -12,7 +12,7 @@ import {
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createAdminPageComponent(_options: { name: string }): Rule {
+export function createAdminPageComponent(_options: { name: string , debugMode: boolean }): Rule {
     return (_tree: Tree, _context: SchematicContext) => {
         const templateSource = apply(url('./files'), [
             applyTemplates({

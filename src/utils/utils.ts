@@ -1,13 +1,12 @@
-import {SchematicContext, Tree} from "@angular-devkit/schematics";
+import {Tree} from "@angular-devkit/schematics";
 import {
     createSourceFile,
     ScriptTarget,
     SourceFile
 } from "@schematics/angular/third_party/github.com/Microsoft/TypeScript/lib/typescript";
 
-export function defaultPath(context: SchematicContext, path: string, debugPath: string): string {
-    const {debug} = context.engine.workflow!.context
-    return debug ? debugPath : path
+export function defaultPath({debugMode}: { debugMode: boolean }, path: string, debugPath: string): string {
+    return debugMode ? debugPath : path
 }
 
 export function readSource(path: string, content: string, parent = true): SourceFile {

@@ -12,6 +12,11 @@
       },
       "x-prompt": "Name of your model that you want to create?",
       "default": "JobTitle"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

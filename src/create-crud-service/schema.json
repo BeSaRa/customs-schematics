@@ -12,6 +12,11 @@
       },
       "default": "jobTitle",
       "x-prompt": "Please enter service name to be generated"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

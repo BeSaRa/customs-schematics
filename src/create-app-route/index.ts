@@ -10,9 +10,9 @@ import {applyToUpdateRecorder} from "@schematics/angular/utility/change";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createAppRoute(_options: { name: string }): Rule {
+export function createAppRoute(_options: { name: string , debugMode: boolean }): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const path = defaultPath(_context, 'app/app-routes.ts', 'app/app-routes.ts')
+        const path = defaultPath(_options, 'src/constants/app-routes.ts', 'app/app-routes.ts')
         const {source} = readSourceAndContent(tree, path)
         const variable = findNodes(source, isObjectLiteralExpression)
         if (!variable.length)

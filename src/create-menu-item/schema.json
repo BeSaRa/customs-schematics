@@ -11,17 +11,22 @@
         "index": 0
       },
       "default": "JOB_TITLE",
-      "x-prompt": "Please enter the endpoint name"
+      "x-prompt": "Please enter the menu name"
     },
     "parent": {
       "type": "string",
-      "description": "Parent name",
+      "description": "Parent menu name",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "default": null,
-      "x-prompt": "Please write the Parent Name like (ADMINISTRATION)"
+      "default": "ADMINISTRATION",
+      "x-prompt": "Please write the Parent Name like"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

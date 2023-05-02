@@ -54,6 +54,11 @@
       "description": "Update the AdminRoutingModule",
       "factory": "./create-route/index#createRoute",
       "schema": "./create-route/schema.json"
+    },
+    "create-admin-service": {
+      "description": "A blank schematic.",
+      "factory": "./create-admin-service/index#createAdminService",
+      "schema": "./create-admin-service/schema.json"
     }
   }
 }

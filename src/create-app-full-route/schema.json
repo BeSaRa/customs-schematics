@@ -18,6 +18,11 @@
       "description": "the absolute route in app",
       "x-prompt": "please provide the absolute route in the app",
       "default": "/home/administration/job-title"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

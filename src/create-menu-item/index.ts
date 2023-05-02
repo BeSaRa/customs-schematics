@@ -9,7 +9,7 @@ import {insertToObject} from "../utils/insertToObject";
 import {applyToUpdateRecorder} from "@schematics/angular/utility/change";
 import {insertToArray} from "../utils/insertToArray";
 
-function generateMenu({name, parent}: { name: string, parent?: string }) {
+function generateMenu({name, parent}: { name: string, parent?: string, debugMode: boolean }) {
     const realName = strings.underscore(name).toUpperCase()
     return `{
     id: MenuIdes.${realName},
@@ -21,9 +21,9 @@ function generateMenu({name, parent}: { name: string, parent?: string }) {
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createMenuItem(_options: { name: string, parent: string }): Rule {
+export function createMenuItem(_options: { name: string, parent: string, debugMode: boolean }): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const pathIds = defaultPath(_context, 'app/menu-ides.ts', 'app/menu-ides.ts')
+        const pathIds = defaultPath(_options, 'src/constants/menu-ides.ts', 'app/menu-ides.ts')
         const {source: idsSource} = readSourceAndContent(tree, pathIds)
 
         const idsVariables = findNodes(idsSource, isObjectLiteralExpression)
@@ -37,7 +37,7 @@ export function createMenuItem(_options: { name: string, parent: string }): Rule
         tree.commitUpdate(recorder)
 
 
-        const pathMenu = defaultPath(_context, 'app/menus.ts', 'app/menus.ts')
+        const pathMenu = defaultPath(_options, 'src/constants/menus.ts', 'app/menus.ts')
         const {source: menuSource} = readSourceAndContent(tree, pathMenu)
 
 

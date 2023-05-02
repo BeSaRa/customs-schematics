@@ -1,5 +1,4 @@
 import {Rule, SchematicContext, SchematicsException, strings, Tree} from '@angular-devkit/schematics';
-import {EndpointOptions} from "./endpoint-options";
 import {defaultPath, readSourceAndContent} from "../utils/utils";
 import {findNodes} from "@schematics/angular/utility/ast-utils";
 import {
@@ -10,10 +9,10 @@ import {applyToUpdateRecorder} from "@schematics/angular/utility/change";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createEndpoint(_options: EndpointOptions): Rule {
+export function createEndpoint(_options: { name: string, url: string, debugMode: boolean }): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const path = defaultPath(_context, 'src/constants/endpoints.ts', 'app/endpoints.ts')
-        const {source} = readSourceAndContent(tree , path)
+        const path = defaultPath(_options, 'src/constants/endpoints.ts', 'app/endpoints.ts')
+        const {source} = readSourceAndContent(tree, path)
         const variable = findNodes(source, isObjectLiteralExpression)
         if (!variable.length)
             throw new SchematicsException('cannot find the EndPoints Variable!')

@@ -12,6 +12,11 @@
       },
       "x-prompt": "Route name in AppRoutes constant",
       "default": "JOB_TITLE"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

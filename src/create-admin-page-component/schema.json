@@ -12,6 +12,11 @@
       },
       "x-prompt": "What name would you like to use for the component",
       "default": "job-title"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [

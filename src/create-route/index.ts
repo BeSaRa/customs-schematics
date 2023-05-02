@@ -17,9 +17,9 @@ function generateRoute(options: { name: string }): string {
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createRoute(_options: any): Rule {
+export function createRoute(_options: { name: string, debugMode: boolean }): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const path = defaultPath(_context, 'app/administration-routing.module.ts', 'app/administration-routing.module.ts');
+        const path = defaultPath(_options, 'src/modules/administration/administration-routing.module.ts', 'app/administration-routing.module.ts');
         const componentName = `${classify(dasherize(_options.name))}Component`
         const importPath = `@modules/administration/components/${dasherize(_options.name)}/${dasherize(_options.name)}.component`
         const {source} = readSourceAndContent(tree, path)

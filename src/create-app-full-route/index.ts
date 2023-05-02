@@ -1,6 +1,5 @@
 import {Rule, SchematicContext, SchematicsException, strings, Tree} from '@angular-devkit/schematics';
 import {defaultPath, readSourceAndContent} from "../utils/utils";
-import {AppFullRouteOptions} from "./app-full-route-options";
 import {findNodes} from "@schematics/angular/utility/ast-utils";
 import {
     isObjectLiteralExpression
@@ -11,9 +10,12 @@ import {applyToUpdateRecorder} from "@schematics/angular/utility/change";
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function createAppFullRoute(_options: AppFullRouteOptions): Rule {
+export function createAppFullRoute(_options: {
+    name: string;
+    route: string, debugMode: boolean
+}): Rule {
     return (tree: Tree, _context: SchematicContext) => {
-        const path = defaultPath(_context, 'app/app-full-routes.ts', 'app/app-full-routes.ts')
+        const path = defaultPath(_options, 'src/constants/app-full-routes.ts', 'app/app-full-routes.ts')
         const {source} = readSourceAndContent(tree, path)
         const variable = findNodes(source, isObjectLiteralExpression)
         if (!variable.length)

@@ -12,6 +12,11 @@
       },
       "default": "JOB_TITLE",
       "x-prompt": "Please enter key for the Route"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
     }
   },
   "required": [
