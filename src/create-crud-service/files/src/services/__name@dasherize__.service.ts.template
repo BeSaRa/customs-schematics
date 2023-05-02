@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import { <%= classify(name) %> } from '@models/<%= dasherize(name) %>';
+import { CastResponseContainer } from 'cast-response';
+import { BaseCrudWithDialogService } from '@abstracts/base-crud-with-dialog-service';
+import { ComponentType } from '@angular/cdk/portal';
+import { <%= classify(name) %>PopupComponent } from '@modules/administration/popups/<%= dasherize(name) %>-popup/<%= dasherize(name) %>-popup.component';
+import { Constructor } from '@app-types/constructors';
+import { Pagination } from '@models/pagination';
+    
+@CastResponseContainer({
+  $pagination: {
+    model: () => Pagination,
+    shape: {
+      'rs.*': () => <%= classify(name) %>,
+    },
+  },
+  $default: {
+    model: () => <%= classify(name) %>,
+  },
+})
+@Injectable({
+  providedIn: 'root',
+})
+export class <%= classify(name) %>Service extends BaseCrudWithDialogService<
+<%= classify(name) %>PopupComponent,
+<%= classify(name) %>> {
+  protected getModelClass(): Constructor<<%= classify(name) %>> {
+    return <%= classify(name) %>;
+  }
+
+  protected getModelInstance(): <%= classify(name) %> {
+    return new <%= classify(name) %>();
+  }
+
+  getDialogComponent(): ComponentType<<%= classify(name) %>PopupComponent> {
+    return <%= classify(name) %>PopupComponent;
+  }
+
+  getUrlSegment(): string {
+    return this.urlService.URLS.<%= dasherize(name).toUpperCase() %>;
+  }
+}

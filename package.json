@@ -17,6 +17,8 @@
     "apply:create-model-interceptor": "npm run build && schematics .:create-model-interceptor --debug=false",
     "check:create-model": "npm run build && schematics .:create-model",
     "apply:create-model": "npm run build && schematics .:create-model --debug=false",
+    "check:create-crud-service": "npm run build && schematics .:create-crud-service",
+    "apply:create-crud-service": "npm run build && schematics .:create-crud-service --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
