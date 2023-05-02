@@ -1,0 +1,15 @@
+import { BaseModel } from '@abstracts/base-model';
+import { <%= classify(name) %>Service } from '@services/<%= dasherize(name)%>.service';
+import { <%= classify(name) %>Interceptor } from '@model-interceptors/<%= dasherize(name)%>-interceptor';
+import { InterceptModel } from 'cast-response';
+
+const { send, receive } = new <%= classify(name) %>Interceptor();
+  
+@InterceptModel({send,receive})
+export class <%= classify(name) %> extends BaseModel<<%= classify(name) %>, <%= classify(name) %>Service> {
+  $$__service_name__$$ = '<%= classify(name) %>Service';
+
+  buildForm(controls = false): object {
+    return {}
+  }
+}
