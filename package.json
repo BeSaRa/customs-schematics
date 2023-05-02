@@ -9,6 +9,8 @@
     "apply:create-endpoint": "npm run build && schematics .:create-endpoint --debug=false",
     "check:create-app-full-route": "npm run build && schematics .:create-app-full-route",
     "apply:create-app-full-route": "npm run build && schematics .:create-app-full-route --debug=false",
+    "check:create-app-route": "npm run build && schematics .:create-app-route",
+    "apply:create-app-route": "npm run build && schematics .:create-app-route --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
