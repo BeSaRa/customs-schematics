@@ -23,6 +23,8 @@
     "apply:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component --debug=false",
     "check:create-admin-page-component": "npm run build && schematics .:create-admin-page-component",
     "apply:create-admin-page-component": "npm run build && schematics .:create-admin-page-component --debug=false",
+    "check:create-route": "npm run build && schematics .:create-route",
+    "apply:create-route": "npm run build && schematics .:create-route --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

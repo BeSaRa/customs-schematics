@@ -49,6 +49,11 @@
       "description": "Create endpoint.",
       "factory": "./create-endpoint/index#createEndpoint",
       "schema": "./create-endpoint/schema.json"
+    },
+    "create-route": {
+      "description": "Update the AdminRoutingModule",
+      "factory": "./create-route/index#createRoute",
+      "schema": "./create-route/schema.json"
     }
   }
 }
