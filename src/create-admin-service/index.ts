@@ -11,6 +11,6 @@ export function createAdminService(_options: { name: string, url: string, parent
                 interactive: false
             })
         })
-        return chain([...rules, schematic('app-lint', _options)])
+        return chain([...rules, /*schematic('app-lint', _options)*/])
     };
 }
