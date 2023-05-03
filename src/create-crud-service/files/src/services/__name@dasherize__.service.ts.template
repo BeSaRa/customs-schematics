@@ -37,6 +37,6 @@ export class <%= classify(name) %>Service extends BaseCrudWithDialogService<
   }
 
   getUrlSegment(): string {
-    return this.urlService.URLS.<%= dasherize(name).toUpperCase() %>;
+    return this.urlService.URLS.<%= underscore(name).toUpperCase() %>;
   }
 }

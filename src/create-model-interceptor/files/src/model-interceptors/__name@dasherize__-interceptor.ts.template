@@ -1,7 +1,7 @@
 import { ModelInterceptorContract } from 'cast-response';
 import { <%= classify(name)%> } from '@models/<%=dasherize(name)%>';
 
-export class <%= classify(name)%>Interceptor implements IModelInterceptor<<%= classify(name)%>> {
+export class <%= classify(name)%>Interceptor implements ModelInterceptorContract<<%= classify(name)%>> {
   send(model: Partial<<%= classify(name)%>>): Partial<<%= classify(name)%>> {
     return model;
   }

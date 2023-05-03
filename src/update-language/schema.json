@@ -5,12 +5,12 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "append the given name to AdministrationRoutingModule file",
+      "description": "add localization to lang-keys-contract but with prefix menu",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "Route name in AppRoutes constant",
+      "x-prompt": "with is the localization key",
       "default": "job-title"
     },
     "debugMode": {

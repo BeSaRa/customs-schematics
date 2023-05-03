@@ -59,6 +59,15 @@
       "description": "A blank schematic.",
       "factory": "./create-admin-service/index#createAdminService",
       "schema": "./create-admin-service/schema.json"
+    },
+    "update-language": {
+      "description": "A blank schematic.",
+      "factory": "./update-language/index#updateLanguage",
+      "schema": "./update-language/schema.json"
+    },
+    "app-lint": {
+      "description": "A blank schematic.",
+      "factory": "./app-lint/index#appLint"
     }
   }
 }
