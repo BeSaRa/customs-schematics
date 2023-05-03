@@ -1,6 +1,6 @@
 {
   "name": "customs-schematics",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "tool to make the development more easier than ever",
   "scripts": {
     "build": "tsc -p tsconfig.json",
