@@ -15,7 +15,7 @@ export function updateImports(_options: { name: string, debugMode: boolean }): R
         const popupClassifiedName = classify(_options.name) + 'PopupComponent'
         const dashedName = dasherize(_options.name)
         const mainComponentImportPath = `@modules/administration/components/${dashedName}/${dashedName}.component`
-        const popupComponentImportPath = `@modules/administration/components/${dashedName}-popup/${dashedName}-popup.component`
+        const popupComponentImportPath = `@modules/administration/popups/${dashedName}-popup/${dashedName}-popup.component`
 
         const recorder = tree.beginUpdate(path)
         const mainChange = addDeclarationToModule(source, path, classifiedName, mainComponentImportPath)
