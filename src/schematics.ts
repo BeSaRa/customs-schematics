@@ -9,5 +9,6 @@ export const AppSchematics = [
     'create-route',
     'create-admin-page-component',
     'create-admin-popup-component',
-    'update-language'
+    'update-language',
+    'update-imports'
 ]
