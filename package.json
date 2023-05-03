@@ -48,5 +48,8 @@
     "@types/jasmine": "~4.3.0",
     "@types/node": "^14.15.0",
     "jasmine": "^4.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/BeSaRa/customs-schematics.git"
   }
 }
