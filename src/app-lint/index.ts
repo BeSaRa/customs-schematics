@@ -1,10 +1,12 @@
-import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import {Rule, SchematicContext, Tree} from '@angular-devkit/schematics';
+import {execSync} from "child_process";
 
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
-export function appLint(_options: any): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
-    return tree;
-  };
+export function appLint(): Rule {
+    return (_tree: Tree, _context: SchematicContext) => {
+        _context.logger.info(`Executing: npm run lint --fix`);
+        execSync('npm run lint:fix')
+    };
 }
