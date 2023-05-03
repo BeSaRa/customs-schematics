@@ -7,6 +7,6 @@ import {execSync} from "child_process";
 export function appLint(): Rule {
     return (_tree: Tree, _context: SchematicContext) => {
         _context.logger.info(`Executing: npm run lint --fix`);
-        execSync('npm run lint:fix')
+        execSync('eslint --fix')
     };
 }
