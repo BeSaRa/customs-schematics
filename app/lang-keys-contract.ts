@@ -1,4 +1,5 @@
 export interface LangKeysContract {
+  menu_job_title : string;
   login: string;
   ar_name: string;
   en_name: string;

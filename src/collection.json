@@ -68,6 +68,11 @@
     "app-lint": {
       "description": "A blank schematic.",
       "factory": "./app-lint/index#appLint"
+    },
+    "update-imports": {
+      "description": "A blank schematic.",
+      "factory": "./update-imports/index#updateImports",
+      "schema": "./update-imports/schema.json"
     }
   }
 }

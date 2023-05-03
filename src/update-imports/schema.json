@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "CreateRoute",
+  "title": "Update the administration Routing module file",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "component name to update the imports ",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "component name to update the imports",
+      "default": "job-title"
+    },
+    "debugMode": {
+      "type": "boolean",
+      "description": "while test it on the local files please make it true",
+      "default": false
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -15,8 +15,9 @@
     "check:create-admin-popup-component": "npm run build && schematics .:create-admin-popup-component --debug-mode",
     "check:create-admin-page-component": "npm run build && schematics .:create-admin-page-component --debug-mode",
     "check:create-route": "npm run build && schematics .:create-route --debug-mode",
-    "check:create-admin-service": "npm run build && schematics .:create-admin-service --debug-mode",
+    "check:create-admin-service": "npm run build && schematics .:create-admin-service --debug-mode --debug=false",
     "check:update-language": "npm run build && schematics .:update-language --debug-mode --debug=false",
+    "check:update-imports": "npm run build && schematics .:update-imports --debug-mode --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
