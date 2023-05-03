@@ -1,4 +1,4 @@
-import {Rule, schematic, SchematicContext, Tree} from '@angular-devkit/schematics';
+import {chain, Rule, schematic, SchematicContext, Tree} from '@angular-devkit/schematics';
 import {AppSchematics} from "../schematics";
 
 
@@ -11,6 +11,6 @@ export function createAdminService(_options: { name: string, url: string, parent
                 interactive: false
             })
         })
-        return Promise.resolve().then(() => rules).then(() => schematic('app-lint', _options))
+        return chain([...rules, schematic('app-lint', _options)])
     };
 }
