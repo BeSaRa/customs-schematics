@@ -1,5 +1,6 @@
 import {chain, Rule, schematic, SchematicContext, Tree} from '@angular-devkit/schematics';
 import {AppSchematics} from "../schematics";
+import {RunSchematicTask} from "@angular-devkit/schematics/tasks";
 
 
 // You don't have to export the function as default. You can also have more than one rule factory
@@ -11,6 +12,8 @@ export function createAdminService(_options: { name: string, url: string, parent
                 interactive: false
             })
         })
-        return chain([...rules, /*schematic('app-lint', _options)*/])
+
+        _context.addTask(new RunSchematicTask('app-lint', _options))
+        return chain(rules)
     };
 }
