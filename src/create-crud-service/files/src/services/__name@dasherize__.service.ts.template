@@ -24,6 +24,7 @@ import { Pagination } from '@models/pagination';
 export class <%= classify(name) %>Service extends BaseCrudWithDialogService<
 <%= classify(name) %>PopupComponent,
 <%= classify(name) %>> {
+  serviceName = '<%= classify(name) %>Service';
   protected getModelClass(): Constructor<<%= classify(name) %>> {
     return <%= classify(name) %>;
   }
