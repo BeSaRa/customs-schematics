@@ -18,6 +18,7 @@
     "check:create-admin-service": "npm run build && schematics .:create-admin-service --debug-mode --debug=false",
     "check:update-language": "npm run build && schematics .:update-language --debug-mode --debug=false",
     "check:update-imports": "npm run build && schematics .:update-imports --debug-mode --debug=false",
+    "check:rebuild-menu": "npm run build && schematics .:rebuild-menu --debug-mode --debug=false",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

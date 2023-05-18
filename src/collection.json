@@ -73,6 +73,10 @@
       "description": "A blank schematic.",
       "factory": "./update-imports/index#updateImports",
       "schema": "./update-imports/schema.json"
+    },
+    "rebuild-menu": {
+      "description": "Rebuild menu IDs",
+      "factory": "./rebuild-menu/index#rebuildMenu"
     }
   }
 }
