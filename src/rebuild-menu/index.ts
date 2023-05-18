@@ -14,7 +14,7 @@ export function rebuildMenu(_options: any): Rule {
         const constant = findNodeValue(source, 'MenuIdes') as ObjectLiteralExpression
         const items = constant.properties.map(item => item.name?.getText()) as string[]
         const content = `export const MenuIdes = {
-    ` + items.map((item, index) => ((index !== 0 ? '\n    ' : '') + item + ': ' + (index + 1))) + `
+    `+ items.map((item, index) => ((index !== 0 ? '\n    ' : '') + item + ': ' + (index + 1))) + `
 };`
         tree.overwrite(pathIds, content)
         return tree;
